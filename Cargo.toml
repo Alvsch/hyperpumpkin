@@ -1,0 +1,49 @@
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev.package."*"]
+opt-level = 3
+
+[workspace]
+resolver = "2"
+members = [
+    "hyperpumpkin",
+]
+default-members = ["hyperpumpkin"]
+
+[workspace.dependencies]
+pumpkin-protocol = { git = "https://github.com/Alvsch/Pumpkin/" }
+pumpkin-core = { git = "https://github.com/Alvsch/Pumpkin/" }
+pumpkin-macros = { git = "https://github.com/Alvsch/Pumpkin/" }
+pumpkin-world = { git = "https://github.com/Alvsch/Pumpkin/" }
+pumpkin-registry = { git = "https://github.com/Alvsch/Pumpkin/" }
+pumpkin-config = { git = "https://github.com/Alvsch/Pumpkin/" }
+
+aes = "0.8.4"
+base64 = "0.22.1"
+bytes = "1.7.2"
+cfb8 = "0.8.1"
+crossbeam = { version = "0.8.4", features = ["crossbeam-channel"] }
+ctrlc = "3.4.5"
+derive_more = { version = "1.0.0", features = ["full"] }
+fastnbt = { git = "https://github.com/owengage/fastnbt.git" }
+flate2 = "1.0.34"
+flecs_ecs = { git = "https://github.com/Indra-db/Flecs-Rust" }
+itertools = "0.13.0"
+md5 = "0.7.0"
+num-derive = "0.4.2"
+num-traits = "0.2.19"
+parking_lot = "0.12.3"
+rand = { version = "0.8.5", features = ["getrandom"] }
+rayon = "1.10.0"
+rsa = "0.9.6"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+sharded-slab = "0.1.7"
+thiserror = "1.0.64"
+tokio = { version = "1.40.0", features = ["rt", "rt-multi-thread", "sync"] }
+tracing = "0.1.40"
+tracing-chrome = "0.7.2"
+tracing-subscriber = "0.3.18"
+uuid = { version = "1.10.0", features = ["serde"] }
